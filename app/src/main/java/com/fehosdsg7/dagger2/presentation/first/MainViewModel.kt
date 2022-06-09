@@ -1,5 +1,6 @@
-package com.fehosdsg7.dagger2.presentation
+package com.fehosdsg7.dagger2.presentation.first
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -11,6 +12,7 @@ class MainViewModel @Inject constructor(iteratorClass : IteratorClass) : ViewMod
     val productLivaData: LiveData<List<Int>> = _productLivaData
 
     init {
+        Log.d("AAA", "MainViewModel")
         _productLivaData.postValue(iteratorClass.getData())
     }
 }
